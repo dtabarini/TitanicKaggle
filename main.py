@@ -11,7 +11,6 @@ def generate_random_solution():
                                      'PassengerId', 'Survived'])
     print(submission_df)
     submission_df.to_csv("./submissions/random-submission.csv", index=False)
-    return
 
 
 if __name__ == "__main__":
