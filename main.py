@@ -30,11 +30,33 @@ def all_women_and_children_die(test):
     print(test['Sex'], test['Age'])
 
 
+def ridge_regression(train, test):
+    # Fill the NaNs
+    print(train["Cabin"])
+    train['Age'] = train['Age'].fillna(train['Age'].mean())
+    train["Cabin"] = train['Cabin'].fillna("D50")
+    train['Embarked'] = train['Embarked'].fillna("S")
+
+    # One hot encode data
+
+    # trim the nubmers of the ticket
+
+    # drop name & ID
+
+    # encode sex
+
+    # cast A-D as 1-4
+
+    # cast scq as w123
+
+    # do the ridge regession
+
+
 if __name__ == "__main__":
     test = pd.read_csv("./data/test.csv")
     train = pd.read_csv("./data/train.csv")
-
     # print(train)
     # print(test)
-    all_women_and_children_die(test)
+    # all_women_and_children_die(test)
     # generate_random_solution()
+    ridge_regression(train, test)
